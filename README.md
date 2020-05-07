@@ -14,3 +14,7 @@ You need a shaders mod to use custom shaders in Minecraft. You can install [Opti
 Then place the [ASCII-Art-Shader-1.0.zip](https://github.com/Cyxo/ASCII-Art-Shader/archive/1.0.zip) under the `shaderpacks` directory in your `.minecraft` folder.
 
 Finally, enable it in Options > Video Settings > Shaders.
+
+## Screenshots
+
+!["Screenshot 1"](https://i.imgur.com/g8E31rp.png)
