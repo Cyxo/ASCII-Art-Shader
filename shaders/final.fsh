@@ -98,6 +98,7 @@ float wetx  = clamp(wetness, 0.0, 1.0);
 float pw = 1.0/ viewWidth;
 float ph = 1.0/ viewHeight;
 
+
 float character(int n, vec2 p)
 {
 	p = floor(p*vec2(4.0, -4.0) + 2.5);
@@ -114,9 +115,10 @@ float character(int n, vec2 p)
 
 // Main --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 void main() {
-  vec2 pix = texcoord.st*vec2(854.0, 480.0);
+  vec2 size = vec2(480/viewHeight*viewWidth, 480.0);
+  vec2 pix = texcoord.st*size;
   
-	vec3 color = texture2D(composite, floor(pix/8.0)*8.0/vec2(854.0, 480.0)).rgb;
+	vec3 color = texture2D(composite, floor(pix/8.0)/size*8.0).rgb;
 	vec3 col = color;
 	// float land = texture2D(composite, texcoord.st).a;
 	
@@ -132,11 +134,11 @@ void main() {
 	if (gray > 0.7) n = 11512810; // #
 	
 	vec2 p = mod(pix/4.0, 2.0) - vec2(1.0);
-    
+  
 	col = col*character(n, p);
 	
 	// Saturate
-	col = min(col*vec3(1.2), vec3(1.0));
+	col = min((col+vec3(0.1))*vec3(1.1), vec3(1.0));
   
 	gl_FragColor = vec4(col, 1.0);
 	

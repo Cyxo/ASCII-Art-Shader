@@ -11,7 +11,7 @@ My work is only in the `final.fsh` file.
 
 You need a shaders mod to use custom shaders in Minecraft. You can install [Optifine HD](http://shadersmods.com/optifine-hd-mod/) for your favorite Minecraft version.
 
-Then place the [ASCII-Art-Shader-1.0.zip](https://github.com/Cyxo/ASCII-Art-Shader/archive/1.0.zip) under the `shaderpacks` directory in your `.minecraft` folder.
+Then place the [ASCII-Art-Shader-1.1.zip](https://github.com/Cyxo/ASCII-Art-Shader/archive/1.1.zip) under the `shaderpacks` directory in your `.minecraft` folder.
 
 Finally, enable it in Options > Video Settings > Shaders.
 
