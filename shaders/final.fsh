@@ -123,6 +123,8 @@ void main() {
 	// float land = texture2D(composite, texcoord.st).a;
 	
 	float gray = 0.3 * col.r + 0.59 * col.g + 0.11 * col.b;
+
+	col /= max(col.r, max(col.g, col.b));
 	
 	int n =  4096;                // .
 	if (gray > 0.1) n = 65600;    // :
@@ -136,9 +138,6 @@ void main() {
 	vec2 p = mod(pix/4.0, 2.0) - vec2(1.0);
   
 	col = col*character(n, p);
-	
-	// Saturate
-	col = min((col+vec3(0.1))*vec3(1.1), vec3(1.0));
   
 	gl_FragColor = vec4(col, 1.0);
 	
